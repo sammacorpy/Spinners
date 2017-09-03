@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>spinners</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0px;
+        }
+        
+        #spinner2 {
+            width: 175px;
+            height: 175px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            background-color: transparent;
+            border: 2px solid transparent;
+            border-top-color: #ff0000;
+            border-bottom-color: #ff0000;
+            animation: spin 1.5s linear 0s infinite;
+        }
+        
+        #spinner1 {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            background-color: #000;
+            animation: spin 1.5s linear 0s infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #spinner1::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: #ff0000;
+            position: absolute;
+            margin: auto;
+            top: -10px;
+            left: 35px;
+            animation: bouncef 2s linear 0s infinite;
+        }
+        
+        #spinner1::before {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: #ff0000;
+            position: absolute;
+            margin: auto;
+            bottom: -10px;
+            left: 35px;
+            animation: bounce 2s linear 0s infinite;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(40px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(-40px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes bouncef {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-40px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(40px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="spinner1">
+
+
+    </div>
+    <div id="spinner2"></div>
+</body>
+
+</html>
