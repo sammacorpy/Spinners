@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>spinners</title>
+    <style>
+        body {
+            background-color: #000;
+            margin: 0px;
+        }
+        
+        #spinner2 {
+            width: 0px;
+            height: 0px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            display: block;
+            margin: auto;
+            background-color: transparent;
+            border: 50px solid transparent;
+            border-top-color: #fff;
+            border-bottom-color: #222;
+            animation: spin 1s linear 0s infinite;
+        }
+        
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        #spinner2::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: #222;
+            position: absolute;
+            margin: auto;
+            top: -40px;
+            left: -5px;
+        }
+        
+        #spinner2::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 100%;
+            display: inline-block;
+            background-color: #fff;
+            position: absolute;
+            margin: auto;
+            bottom: -40px;
+            left: -4px;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(40px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(-40px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes bouncef {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-40px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(40px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="spinner1">
+
+
+    </div>
+    <div id="spinner2"></div>
+</body>
+
+</html>
