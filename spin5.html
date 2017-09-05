@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>spin5</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        svg {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            animation: rot 1s linear 0s infinite;
+        }
+        
+        @keyframes rot {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes inc {
+            0% {
+                stroke-width: 1px;
+            }
+            50% {
+                stroke-width: 3px;
+            }
+            100% {
+                stroke-width: 1px;
+            }
+        }
+        
+        line {
+            animation: inc 1s linear 0s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="200" height="200">
+            <g>
+                <title>Layer 1</title>
+                <line id="svg_1" y2="38.2" x2="121" y1="38.2" x1="81" stroke-width="1" stroke="#e01f1f" fill="none"/>
+                <line id="svg_2" y2="66.2" x2="137" y1="66.2" x1="64" stroke-width="1" stroke="#7fff00" fill="none"/> 
+                <line id="svg_3" y2="94.2" x2="157" y1="94.2" x1="44" stroke-width="1" stroke="#007fff" fill="none"/>
+                <line id="svg_4" y2="120.2" x2="137" y1="120.2" x1="64" stroke-width="1" stroke="#7fff00" fill="none"/>
+                <line stroke="#d33b3b" id="svg_5" y2="148.2" x2="121" y1="148.2" x1="81" stroke-width="1" fill="none"/>           
+            </g>
+           </svg>
+    <script>
+        var s1 = document.getElementById('svg_1');
+        var x1 = 81;
+        var x2 = 121;
+        var dx = 1;
+
+        function animate() {
+
+            s1.setAttribute('x1', "" + x1);
+            s1.setAttribute('x2', "" + x2);
+            x1 = x1 + dx;
+            x2 = x2 - dx
+            if ((x2 - x1) <= 0) {
+                dx = -1
+            } else if (x1 < 81 && x2 > 121) {
+                dx = +1;
+            }
+
+
+        }
+        var t = setInterval(animate, 30);
+
+
+        var s2 = document.getElementById('svg_2');
+        var s2x1 = 64;
+        var s2x2 = 137;
+        var s2dx = 1;
+
+
+        function animate2() {
+
+            s2.setAttribute('x1', "" + s2x1);
+            s2.setAttribute('x2', "" + s2x2);
+            s2x1 = s2x1 + s2dx;
+            s2x2 = s2x2 - s2dx
+            if ((s2x2 - s2x1) <= 0) {
+                s2dx = -1
+            } else if (s2x1 < 64 && s2x2 > 137) {
+                s2dx = +1;
+            }
+
+
+        }
+        var s2t = setInterval(animate2, 20);
+
+
+        var s3 = document.getElementById('svg_3');
+        var s3x1 = 44;
+        var s3x2 = 157;
+        var s3dx = 1;
+
+        function animate3() {
+
+            s3.setAttribute('x1', "" + s3x1);
+            s3.setAttribute('x2', "" + s3x2);
+            s3x1 = s3x1 + s3dx;
+            s3x2 = s3x2 - s3dx
+            if ((s3x2 - s3x1) <= 0) {
+                s3dx = -1
+            } else if (s3x1 < 44 && s3x2 > 157) {
+                s3dx = +1;
+            }
+
+
+        }
+        var s3t = setInterval(animate3, 10);
+
+        var s4 = document.getElementById('svg_4');
+        var s4x1 = 64;
+        var s4x2 = 137;
+        var s4dx = 1;
+
+
+        function animate4() {
+
+            s4.setAttribute('x1', "" + s4x1);
+            s4.setAttribute('x2', "" + s4x2);
+            s4x1 = s4x1 + s4dx;
+            s4x2 = s4x2 - s4dx
+            if ((s4x2 - s4x1) <= 0) {
+                s4dx = -1
+            } else if (s4x1 < 64 && s4x2 > 137) {
+                s4dx = +1;
+            }
+
+
+        }
+        var s4t = setInterval(animate4, 20);
+
+
+
+
+        var s5 = document.getElementById('svg_5');
+        var s5x1 = 81;
+        var s5x2 = 121;
+        var s5dx = 1;
+
+        function animate5() {
+
+            s5.setAttribute('x1', "" + s5x1);
+            s5.setAttribute('x2', "" + s5x2);
+            s5x1 = s5x1 + dx;
+            s5x2 = s5x2 - dx
+            if ((s5x2 - s5x1) <= 0) {
+                s5dx = -1
+            } else if (s5x1 < 81 && s5x2 > 121) {
+                s5dx = +1;
+            }
+
+
+        }
+        var s5t = setInterval(animate5, 30);
+
+
+
+
+
+
+
+        var s1y = 38.2;
+        var s2y = 66.2;
+        var s3y = 94.2;
+        var s4y = 120.2;
+        var s5y = 148.2;
+
+        var y1dx = 1;
+        var y2dx = 1;
+
+        function animate6() {
+
+            s1.setAttribute('y1', "" + s1y);
+            s1.setAttribute('y2', "" + s1y);
+            s5.setAttribute('y1', "" + s5y);
+            s5.setAttribute('y2', "" + s5y);
+            s1y += y1dx;
+            s5y -= y1dx;
+            if ((80.2 - s1y) <= 0) {
+                y1dx = -1;
+            } else if (s1y < 38.2) {
+                y1dx = +1;
+            }
+
+
+            s2.setAttribute('y1', "" + s2y);
+            s2.setAttribute('y2', "" + s2y);
+            s4.setAttribute('y1', "" + s4y);
+            s4.setAttribute('y2', "" + s4y);
+            s2y += y1dx;
+            s4y -= y1dx;
+            if ((94.2 - s2y) <= 0) {
+                y2dx = -1;
+            } else if (s2y < 66.2) {
+                y2dx = +1;
+            }
+
+
+
+        }
+        var yt = setInterval(animate6, 30);
+    </script>
+</body>
+
+</html>
