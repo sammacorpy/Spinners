@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        
+        svg {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            animation: rot 0.9s linear 0s infinite;
+        }
+        
+        @keyframes rot {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes inc {
+            0% {
+                stroke-width: 1px;
+            }
+            50% {
+                stroke-width: 3px;
+            }
+            100% {
+                stroke-width: 1px;
+            }
+        }
+        
+        line {
+            animation: inc 1s linear 0s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <svg width="200" height="200">
+            <g>
+                <title>Loading...</title>
+                
+                <line id="svg_3" y2="101.2" x2="147" y1="101.2" x1="54" stroke-width="5" stroke="#007fff" fill="none"/>
+                <line transform="rotate(90.33702850341797 101,100) " id="svg_1" y2="100" x2="147.5" y1="100" x1="54.5" stroke-width="5" stroke="#f20000" fill="none"/>
+                
+            </g>
+           </svg>
+
+</body>
+
+</html>
