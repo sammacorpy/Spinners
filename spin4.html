@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        div {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 100%;
+            background-color: #f20000;
+        }
+        
+        #outer {
+            background-color: transparent;
+            animation: rot 2s linear 0s infinite;
+        }
+        
+        #ball1 {
+            animation: x 2s linear 0s infinite;
+            background-color: #f20000;
+        }
+        
+        #ball2 {
+            animation: y 2s linear 0s infinite;
+            background-color: #f2b200;
+        }
+        
+        #ball3 {
+            animation: xy 2s linear 0s infinite;
+            background-color: #02ff00;
+        }
+        
+        #ball4 {
+            animation: yx 2s linear 0s infinite;
+            background-color: #02ff00;
+        }
+        
+        #ball5 {
+            animation: y_x 2s linear 0s infinite;
+            background-color: #0000ff;
+        }
+        
+        #ball6 {
+            animation: _yx 2s linear 0s infinite;
+            background-color: #0000ff;
+        }
+        
+        #ball7 {
+            animation: _x 2s linear 0s infinite;
+            background-color: #f20000;
+        }
+        
+        #ball8 {
+            animation: _y 2s linear 0s infinite;
+            background-color: #f2b200;
+        }
+        
+        @keyframes x {
+            0% {
+                transform: translateX(0px);
+            }
+            25% {
+                transform: translateX(-20px);
+            }
+            50% {
+                transform: translateX(0px);
+            }
+            75% {
+                transform: translateX(20px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        @keyframes _x {
+            0% {
+                transform: translateX(0px);
+            }
+            25% {
+                transform: translateX(20px);
+            }
+            50% {
+                transform: translateX(0px);
+            }
+            75% {
+                transform: translateX(-20px);
+            }
+            100% {
+                transform: translateX(0px);
+            }
+        }
+        
+        @keyframes y {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-20px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes _y {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(20px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        @keyframes xy {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(-20px, -20px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(20px, 20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes yx {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(20px, 20px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(-20px, -20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes y_x {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(20px, -20px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(-20px, 20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes _yx {
+            0% {
+                transform: translate(0px, 0px);
+            }
+            25% {
+                transform: translate(-20px, 20px);
+            }
+            50% {
+                transform: translate(0px, 0px);
+            }
+            75% {
+                transform: translate(20px, -20px);
+            }
+            100% {
+                transform: translate(0px, 0px);
+            }
+        }
+        
+        @keyframes rot {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        body {
+            background-color: black;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="outer">
+        <div id="ball1"></div>
+        <div id="ball2"></div>
+        <div id="ball3"></div>
+        <div id="ball4"></div>
+        <div id="ball5"></div>
+        <div id="ball6"></div>
+        <div id="ball7"></div>
+        <div id="ball8"></div>
+
+    </div>
+</body>
+
+</html>
